@@ -5,4 +5,8 @@
     <RootNamespace>aspnet_core_fundamentals_v3.web</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\SimpleCrmLib\SimpleCrmLib.csproj" />
+  </ItemGroup>
+
 </Project>
