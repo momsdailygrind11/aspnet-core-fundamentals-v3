@@ -18,6 +18,8 @@ namespace aspnet_core_fundamentals_v3.web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddMvc();
             services.AddSingleton<IGreeter, ConfigurationGreeter>();
         }
 
@@ -28,16 +30,42 @@ namespace aspnet_core_fundamentals_v3.web
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler(new ExceptionHandlerOptions
+                    {
+                    ExceptionHandler = context =>
+                    
+                        context.Response.WriteAsync("You went the wrong way!")
+                    
+                });
+            }
+
+            // app.UseFileServer();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseWelcomePage(new WelcomePageOptions { 
+                Path = "/welcome"
+            });
+
+           
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //       // throw new Exception("Something went wrong");   
+            //        var message = greeter.GetGreeting();
+            //        await context.Response.WriteAsync(message);
+            //    });
+            //});
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    var message = greeter.GetGreeting();
-                    await context.Response.WriteAsync(message);
-                });
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
