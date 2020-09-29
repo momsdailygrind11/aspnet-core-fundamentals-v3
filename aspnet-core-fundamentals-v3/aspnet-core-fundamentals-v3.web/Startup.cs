@@ -41,32 +41,35 @@ namespace aspnet_core_fundamentals_v3.web
                 });
             }
 
-            // app.UseFileServer();
-
+          
             app.UseStaticFiles();
-
-            app.UseRouting();
 
             app.UseWelcomePage(new WelcomePageOptions { 
                 Path = "/welcome"
             });
 
-           
-
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapGet("/", async context =>
-            //    {
-            //       // throw new Exception("Something went wrong");   
-            //        var message = greeter.GetGreeting();
-            //        await context.Response.WriteAsync(message);
-            //    });
-            //});
+            app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(name: "default", "{controller=home}/{action=index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "contact",
+                    pattern: "Contact/{phone}",
+                    constraints: new { phone = "\\^d{3}-\\d{3}-\\d{4}$" },
+                    defaults: new { controller = "Contact", action = "List" }
+                    );
+
+                endpoints.MapControllerRoute(
+                    name: "address",
+                    pattern: "Contact/{address}",
+                    defaults: new {controller = "Contact", action = "List"}
+                    
+                    );
             });
+
+            app.Run(ctx => ctx.Response.WriteAsync("Not Found"));
         }
     }
 }

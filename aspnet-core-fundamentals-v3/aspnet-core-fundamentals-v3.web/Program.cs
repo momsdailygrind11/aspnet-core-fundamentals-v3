@@ -24,6 +24,5 @@ namespace SimpleCrm.web
                 {
                     webBuilder.UseStartup<Startup>();
                 }); 
-              
     }
 }
