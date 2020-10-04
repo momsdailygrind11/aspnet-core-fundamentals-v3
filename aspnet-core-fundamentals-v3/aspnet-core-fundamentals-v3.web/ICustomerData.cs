@@ -8,5 +8,7 @@ namespace aspnet_core_fundamentals_v3.web
     public interface ICustomerData
     {
         IEnumerable<Customer> GetAll();
+
+        Customer Get(int id);
     }
 }
