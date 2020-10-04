@@ -1,5 +1,4 @@
-﻿using aspnet_core_fundamentals_v3.web.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +8,16 @@ namespace aspnet_core_fundamentals_v3.web.Controllers
 {
     public class HomeController : Controller
     {
-       public IActionResult Index()
+        private ICustomerData _customerData;
+
+        public HomeController(ICustomerData customerData)
         {
-            var model = new CustomerModel
-            {
-                Id = 1,
-                FirstName = "John",
-                LastName = "Doe",
-                PhoneNumber = "432-987-5555"
-            };
+            _customerData = customerData;
+        }
+
+        public IActionResult Index()
+        {
+            var model = _customerData.GetAll();
             return View(model);
         }
       

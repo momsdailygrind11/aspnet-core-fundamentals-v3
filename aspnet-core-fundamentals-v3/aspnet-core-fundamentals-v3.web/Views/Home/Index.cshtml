@@ -1,9 +1,21 @@
-﻿@model aspnet_core_fundamentals_v3.web.Models.CustomerModel
+﻿@model IEnumerable<aspnet_core_fundamentals_v3.web.Customer>
 <html xmlns="http:/www.w3.org/1999/xhtml">
 <head>
 
 </head>
 <body>
-    <h1>@Model.FirstName @Model.LastName </h1>
+    <h1>Customers </h1>
+    <h1>Welcome to this page</h1>
+    <table>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.PhoneNumber</td>
+            </tr>
+        }
+    </table>
 </body>
 </html>
