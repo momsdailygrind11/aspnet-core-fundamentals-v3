@@ -18,7 +18,7 @@ namespace aspnet_core_fundamentals_v3.web.Controllers
                 LastName = "Doe",
                 PhoneNumber = "432-987-5555"
             };
-            return new ObjectResult(model);
+            return View(model);
         }
       
     
