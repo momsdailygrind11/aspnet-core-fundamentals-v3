@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using aspnet_core_fundamentals_v3.web.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,20 @@ namespace aspnet_core_fundamentals_v3.web.Controllers
     public class HomeController : Controller
     {
         private ICustomerData _customerData;
+        private readonly IGreeter _greeter;
 
-        public HomeController(ICustomerData customerData)
+        public HomeController(ICustomerData customerData,
+            IGreeter greeter)
         {
             _customerData = customerData;
+            _greeter = greeter;
         }
 
         public IActionResult Index()
         {
-            var model = _customerData.GetAll();
+            var model = new HomePageViewModel();
+            model.Customers = _customerData.GetAll();
+            model.CurrentMessage = _greeter.GetGreeting();
             return View(model);
         }
       

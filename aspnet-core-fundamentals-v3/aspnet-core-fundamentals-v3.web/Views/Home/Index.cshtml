@@ -1,13 +1,13 @@
-﻿@model IEnumerable<aspnet_core_fundamentals_v3.web.Customer>
+﻿@model aspnet_core_fundamentals_v3.web.Models.HomePageViewModel
 <html xmlns="http:/www.w3.org/1999/xhtml">
 <head>
 
 </head>
 <body>
     <h1>Customers </h1>
-    <h1>Welcome to this page</h1>
+    <h1>@Model.CurrentMessage</h1>
     <table>
-        @foreach (var customer in Model)
+        @foreach (var customer in Model.Customers)
         {
             <tr>
                 <td>@customer.Id</td>
