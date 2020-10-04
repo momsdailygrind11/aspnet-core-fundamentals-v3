@@ -1,15 +1,24 @@
-﻿using System;
+﻿using aspnet_core_fundamentals_v3.web.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace aspnet_core_fundamentals_v3.web.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public string Index(string id)
+       public IActionResult Index()
         {
-            return "Hello from a controller" + id;
+            var model = new CustomerModel
+            {
+                Id = 1,
+                FirstName = "John",
+                LastName = "Doe",
+                PhoneNumber = "432-987-5555"
+            };
+            return new ObjectResult(model);
         }
       
     
