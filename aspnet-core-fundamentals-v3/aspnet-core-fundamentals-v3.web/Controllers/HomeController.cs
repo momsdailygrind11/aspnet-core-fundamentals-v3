@@ -19,6 +19,13 @@ namespace aspnet_core_fundamentals_v3.web.Controllers
             _greeter = greeter;
         }
 
+        public IActionResult Index()
+        {
+            var model = new HomePageViewModel();
+            model.Customers = _customerData.GetAll();
+            model.CurrentMessage = _greeter.GetGreeting();
+            return View(model);
+        }
         public IActionResult Details(int id)
         {
            Customer cust = _customerData.Get(id);
@@ -28,15 +35,13 @@ namespace aspnet_core_fundamentals_v3.web.Controllers
             }
             return View(cust);
         }
-
-
-        public IActionResult Index()
+        public IActionResult Create()
         {
-            var model = new HomePageViewModel();
-            model.Customers = _customerData.GetAll();
-            model.CurrentMessage = _greeter.GetGreeting();
-            return View(model);
+            return View();
         }
+
+
+     
       
     
 

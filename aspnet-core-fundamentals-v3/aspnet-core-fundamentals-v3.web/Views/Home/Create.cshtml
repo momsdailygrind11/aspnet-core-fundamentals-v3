@@ -1,0 +1,33 @@
+﻿@using aspnet_core_fundamentals_v3.web;
+@model aspnet_core_fundamentals_v3.web.Customer
+@{
+}
+
+<h1>Create</h1>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(x => x.FirstName)
+        @Html.TextAreaFor(x => x.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.LastName)
+        @Html.TextBoxFor(x => x.LastName)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.PhoneNumber)
+        @Html.TextBoxFor(x => x.PhoneNumber)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.OptInNewsletter)
+        @Html.CheckBoxFor(x => x.OptInNewsletter)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Type)
+        @Html.DropDownListFor(x => x.Type, Html.GetEnumSelectList(typeof(CustomerType)))
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}
