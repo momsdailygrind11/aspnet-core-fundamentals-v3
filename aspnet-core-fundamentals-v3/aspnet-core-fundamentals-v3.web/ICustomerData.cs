@@ -10,5 +10,6 @@ namespace aspnet_core_fundamentals_v3.web
         IEnumerable<Customer> GetAll();
 
         Customer Get(int id);
+        void Save(Customer customer);
     }
 }
