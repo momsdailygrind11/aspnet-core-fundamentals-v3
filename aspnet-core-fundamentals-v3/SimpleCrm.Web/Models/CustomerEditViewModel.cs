@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace aspnet_core_fundamentals_v3.web.Models
+namespace SimpleCrm.Web.Models
 {
     public class CustomerEditViewModel
     {

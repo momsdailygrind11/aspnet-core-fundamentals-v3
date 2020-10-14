@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace aspnet_core_fundamentals_v3.web.Controllers
+namespace SimpleCrm.Web.Controllers
 {
     [Route("About")]
 

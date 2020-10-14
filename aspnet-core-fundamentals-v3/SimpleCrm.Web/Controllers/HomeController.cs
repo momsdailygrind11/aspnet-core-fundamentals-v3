@@ -1,11 +1,11 @@
-﻿using aspnet_core_fundamentals_v3.web.Models;
+﻿using SimpleCrm.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace aspnet_core_fundamentals_v3.web.Controllers
+namespace SimpleCrm.Web.Controllers
 {
     public class HomeController : Controller
     {

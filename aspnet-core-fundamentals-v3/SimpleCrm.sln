@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCrm", "aspnet-core-fundamentals-v3.web\SimpleCrm.csproj", "{22884685-9E1A-4353-B505-BF9DA509B675}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCrm", "SimpleCrm\SimpleCrm.csproj", "{3B8899B0-768C-47F4-845A-6DF5AAADB6CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCrmLib", "..\SimpleCrmLib\SimpleCrmLib.csproj", "{D6BCF61C-75B0-452C-8F00-4FA46DE76F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCrm.SqlDbServices", "SimpleCrm.SqlDbServices\SimpleCrm.SqlDbServices.csproj", "{FF714169-2FB0-44AD-97D3-B06A05DBF658}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCrm.SqlDbServices", "SimpleCrm.SqlDbContext\SimpleCrm.SqlDbServices.csproj", "{364A8DE1-A98F-4140-A175-29EE27FBA38C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCrm.Web", "SimpleCrm.Web\SimpleCrm.Web.csproj", "{1CCBF26E-E141-4C99-BCEF-3CB51F0AFF57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{22884685-9E1A-4353-B505-BF9DA509B675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22884685-9E1A-4353-B505-BF9DA509B675}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22884685-9E1A-4353-B505-BF9DA509B675}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22884685-9E1A-4353-B505-BF9DA509B675}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6BCF61C-75B0-452C-8F00-4FA46DE76F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6BCF61C-75B0-452C-8F00-4FA46DE76F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6BCF61C-75B0-452C-8F00-4FA46DE76F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6BCF61C-75B0-452C-8F00-4FA46DE76F5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{364A8DE1-A98F-4140-A175-29EE27FBA38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{364A8DE1-A98F-4140-A175-29EE27FBA38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{364A8DE1-A98F-4140-A175-29EE27FBA38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{364A8DE1-A98F-4140-A175-29EE27FBA38C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8899B0-768C-47F4-845A-6DF5AAADB6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8899B0-768C-47F4-845A-6DF5AAADB6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8899B0-768C-47F4-845A-6DF5AAADB6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8899B0-768C-47F4-845A-6DF5AAADB6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF714169-2FB0-44AD-97D3-B06A05DBF658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF714169-2FB0-44AD-97D3-B06A05DBF658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF714169-2FB0-44AD-97D3-B06A05DBF658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF714169-2FB0-44AD-97D3-B06A05DBF658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CCBF26E-E141-4C99-BCEF-3CB51F0AFF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCBF26E-E141-4C99-BCEF-3CB51F0AFF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCBF26E-E141-4C99-BCEF-3CB51F0AFF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCBF26E-E141-4C99-BCEF-3CB51F0AFF57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

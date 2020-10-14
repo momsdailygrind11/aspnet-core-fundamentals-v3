@@ -1,4 +1,4 @@
-﻿using aspnet_core_fundamentals_v3.web;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SimpleCrm.SqlDbServices
 {
-    class SqlCustomerData : ICustomerData
+    public class SqlCustomerData : ICustomerData
     {
         private SimpleCrmDbContext _context;
         public SqlCustomerData(SimpleCrmDbContext context)
