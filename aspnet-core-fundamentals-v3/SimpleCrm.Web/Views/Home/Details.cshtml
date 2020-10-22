@@ -1,9 +1,8 @@
 ﻿@model SimpleCrm.Customer
+@{ 
+    ViewBag.Title = Model.FirstName;
+}
 
-<head>
-
-</head>
-<body>
      <h3>@Model.FirstName</h3>
     @Html.ActionLink("Back", nameof(Index))
-</body>
+
