@@ -14,7 +14,7 @@ namespace SimpleCrm.Web.Models
 
         [Display(Name = "Last Name")]
         [Required()]
-        [Range(1,50)]
+        [MaxLength(50)]
         public string LastName { get; set; }
 
         [Display(Name = "Phone")]
