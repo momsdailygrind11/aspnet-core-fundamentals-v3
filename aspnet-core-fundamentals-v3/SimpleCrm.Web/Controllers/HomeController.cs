@@ -1,5 +1,6 @@
 ﻿using SimpleCrm.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimpleCrm.Web.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private ICustomerData _customerData;
@@ -24,6 +26,7 @@ namespace SimpleCrm.Web.Controllers
             model.Customers = _customerData.GetAll();
             return View(model);
         }
+        [AllowAnonymous]
         public IActionResult Details(int id)
         {
            Customer cust = _customerData.Get(id);
