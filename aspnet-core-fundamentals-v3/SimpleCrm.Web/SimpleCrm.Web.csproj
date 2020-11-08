@@ -30,4 +30,8 @@
     <ProjectReference Include="..\SimpleCrm\SimpleCrm.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\NewFolder\" />
+  </ItemGroup>
+
 </Project>

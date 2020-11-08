@@ -7,12 +7,15 @@
 </head>
 <body>
     <div>
+        @await Component.InvokeAsync("LoginLogout") 
+    </div>
+    <div>
         @RenderBody()
     </div>
     <footer>
-        @await Component.InvokeAsync("Greeting") 
+        @await Component.InvokeAsync("Greeting")
         @RenderSection("footer", false)
-        &copy; @DateTime.Now.Year SimpleCrm Sample Corp. 
+        &copy; @DateTime.Now.Year SimpleCrm Sample Corp.
     </footer>
 </body>
 </html>
