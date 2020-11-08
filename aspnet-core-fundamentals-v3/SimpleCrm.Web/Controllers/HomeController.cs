@@ -19,6 +19,7 @@ namespace SimpleCrm.Web.Controllers
             _customerData = customerData;
            
         }
+        [AllowAnonymous]
 
         public IActionResult Index()
         {
@@ -26,7 +27,7 @@ namespace SimpleCrm.Web.Controllers
             model.Customers = _customerData.GetAll();
             return View(model);
         }
-        [AllowAnonymous]
+       
         public IActionResult Details(int id)
         {
            Customer cust = _customerData.Get(id);
