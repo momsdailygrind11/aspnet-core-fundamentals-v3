@@ -20,15 +20,15 @@
     }
   },
   {
-    "outputFileName": "wwwroot/js/vendor-post.min.js",
     // An array of relative input file paths. Globbing patterns supported
     "inputFiles": [
       "node_modules/jquery/dist/jquery.min.js",
       "node_modules/jquery-validation/dist/jquery.validate.min.js",
-      "node_modules/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+      "node_modules/jquery-validation-unobtrusive/js/jquery.validate.unobtrusive.min.js"
     ],
     "minify": {
       "enabled": false /*already minified*/
-    }
+    },
+    "outputFileName": "wwwroot/js/vendor-post.min.js"
   }
 ]

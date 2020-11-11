@@ -12,4 +12,16 @@
 }
 .mdl-textfield__error.field-validation-error {
     visibility: visible;
+   
 }
+
+.validation-summary-errors{
+    color: red;
+   
+}
+
+li{
+    list-style: none;
+
+}
+
