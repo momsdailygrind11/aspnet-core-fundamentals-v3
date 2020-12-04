@@ -9,6 +9,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
+import { CustomerModule } from './customer/customer.module';
 
 
 
@@ -25,7 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    CustomerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
