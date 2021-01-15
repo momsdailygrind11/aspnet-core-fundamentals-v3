@@ -37,3 +37,10 @@ $simple-crm-cli-theme: mat-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.content-area {
+  padding-top: 2em;
+  max-width: 75%;
+  margin-bottom: 4em;
+  margin: auto;
+}
