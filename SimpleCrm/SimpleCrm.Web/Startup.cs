@@ -35,6 +35,8 @@ namespace SimpleCrm.Web
                     ExceptionHandler = context => context.Response.WriteAsync("Oops!")
                 });
             }
+            app.UseFileServer();
+
 
             app.UseRouting();
 
